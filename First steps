@@ -1,0 +1,82 @@
+#include <iostream>
+using namespace std;
+void main()
+{
+	cout <<"\"To be or not to be,\n";
+	cout <<"That is the question.\"\n";
+	cout <<"         W.Shakespeare";
+
+cout <<"\t\t\t Every\n"<<"\t\t\t hunter\n"
+		<<"\t\t\t wants\n"<<"\t\t\t to\n"<<"\t\t\t know\n"
+		<<"\t\t\t where\n"<<"\t\t\t does\n"<<"\t\t\t pheasant\n"<<"\t\t\t sit\n";
+   
+   cout << "Detached House for sale\n";
+	cout << "Features:\n";
+	cout << "Detached property on approx. 0.72 of an acre\n";
+	cout << "Close to Avoca Village\n";
+	cout << "Oil Central Heating\n";
+	cout << "Private gardens\n";
+	cout << "Arklow approx. 10km drive\n";
+	cout << "\n";
+	cout << "Call:222-22-22\n";
+	cout << "\n";
+	cout << "\n";
+	cout << "\t222\t|\t222\t|\t222\t|\n";
+	cout << "\t22\t|\t22\t|\t22\t|\n";
+	cout << "\t22\t|\t22\t|\t22\t|\n";
+   
+float time, distance, speed;
+	cout << "Hello!\n"<<"Let's calculate speed!\n";
+	cout << "Enter time\n";
+	cin >> time;
+	cout << "Enter distance\n";
+	cin >> distance;
+	speed = distance / time;
+	cout << "Speed=" << speed;
+  
+  float R1=2;
+	float R2=4;
+	float R3=8;
+	float R0;
+	R0=1/( 1 / R1 + 1 / R2 + 1 / R3);
+		cout << R0;
+    
+    float speed2, time2, acceleration, distance2;
+	cout << "Hello!\n" << "Let's calculate the distance\n";
+	cout << "Enter speed\n";
+	cin >> speed2;
+	cout << "Enter time\n";
+	cin>> time2;
+	cout << "Enter acceleration\n";
+	cin >> acceleration;
+	distance2 = speed * time + (acceleration * (time * time)) / 2;
+	cout << "Distance=" << distance2;
+  
+  float h, m, s, h1, m1, s1;
+	cout << "Hello!\n";
+	cout << "Enter the start time of a conversation\n";
+	cin >> h >> m >> s;
+	cout << "Enter the end time of a conversation\n";
+	cin >> h1 >> m1 >> s1;
+	float hours, minutes, seconds, price, cost;
+	hours = (h1 - h)*3600;
+	minutes = (m1 - m)*60;
+	seconds = s1 - s;
+	price = 30.00 / 60.00;
+	cost = price * (hours + minutes + seconds);
+	cout << "The cost of call:" << cost << "\n";
+	cout << "Thank you! Bye!";
+  
+  const float PI = 3.14;
+	float lenght, radius, area;
+	cout << "Let's count the area of the circle\n\n";
+	cout << "Put the lenght of the circle\n\n";
+	cin >> lenght;
+	cout << "\n\n";
+	radius = lenght / (2 * PI);
+	area = PI * radius * radius;
+	cout << "Area of the circle:" << area << "\n\n";
+  
+  
+  
+}

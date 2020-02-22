@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+void main()
+{
+	int variable = 1;
+	int variable2 = variable + 3;
+	int variable3 = variable + variable2;
+	cout <<"Variable= "<< variable<<"\n"<<"Variable2= " << variable2<<"\n"<<"Variable3= " << variable3<<"\n\n";
+  setlocale(0, "Ukrainian");
+	int egg, bread, flakes;
+	float eggP, breadP, flakesP;
+	cout << "Введіть кількість яєць та ціну ";
+	cin>> egg >> eggP;
+	cout << "Ведіть кількість хліба та ціну ";
+	cin>> bread >> breadP;
+	cout << "Введіть кількість пачок пластівців та ціну ";
+	cin>> flakes >> flakesP;
+	cout << "Яйця " << egg << " X " << eggP << " = " << egg * eggP << endl
+		<< "Хліб " << bread << " X " << breadP << " = " << bread * breadP << endl
+		<< "Пластівці " << flakes << " X " << flakesP << " = " << flakes * flakesP << endl
+		<< "Загалом " << egg * eggP + bread * breadP + flakes * flakesP;
+	cout << endl << endl << endl;
+int cup=6,plate=cup,fork=cup, spoon = cup, inTotal;
+	inTotal = cup + plate + fork + spoon;
+	cout <<"\n"<< "Загалом столових приборів " << inTotal<<"\n\n";
+}

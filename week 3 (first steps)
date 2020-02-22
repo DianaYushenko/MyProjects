@@ -1,0 +1,96 @@
+#include <iostream>
+using namespace std;
+void main()
+{
+	setlocale(0, "Ukrainian");
+	int x;
+	cout << "Введіть чотиризначне число\n";
+	cin >> x;
+	int first, second, third, fourth;
+	first = x / 1000;
+	second = (x / 100) % 10;
+	third = (x / 10) % 10;
+	fourth = x % 10;
+	cout << first + third << "\n";
+	cout << second - fourth << "\n\n";
+  
+  int y;
+	cout << "Введіть тризначне число \n";
+	cin >> y;
+	cout << y % 10 + y / 100 * 10 << "\n\n";
+  
+  int z;
+	cout << "Введіть тризначне число\n";
+	cin >> z;
+	cout << z / 100 + (z / 10) % 10 * 10 + z % 10 * 100 << "\n\n";
+  
+  int d;
+	cout << "Введіть п\"ятизначне число\n";
+	cin >> d;
+	cout << (d / 10) % 10 * 10000 + d % 10 * 1000 + (d / 10000) * 100 + (d / 1000)%10 * 10 + (d / 100)%10 << "\n\n";
+  
+  int a, b;
+	cout << "ВВедіть перше тризначне число\n";
+	cin >> a;
+	cout << "Введіть друге тризначне число\n";
+	cin >> b;
+	int der_a, der_b;
+	der_a = (a / 10) % 10;
+	der_b = (b / 10) % 10;
+	cout << "Результат перший: " << a % 10 + der_b * 10 + a / 100 * 100 << "\n";
+	cout << "Результат другий: " << b % 10 + der_a*10 + b / 100 * 100 << "\n\n";
+  
+  int money, price;
+	cout << "Введіть кількість грошей\n";
+	cin >> money;
+	cout << "Введіть вартість товару\n";
+	cin >> price;
+	cout << "Ви можете придбати: " << money / price << "  одиниць товару\n";
+	cout << "Ваша решта складе: " << money % price << "\n\n";
+  
+  float money, percentages;
+	cout << "Введіть суму вкладу \n";
+	cin >> money;
+	cout << "Введіть річний відсоток \n";
+	cin >> percentages;
+	cout << "Кожен місяць банк виплачуватиме вам: ";
+	cout << (money * (percentages / 100)) / 12 << "\n\n";
+  
+  const float POUND = 405.9;
+	float kg, lbs;
+	cout << "Введіть кількість кілограм\n";
+	cin >> kg;
+	cout << "У фунтах це складе:" << kg / (POUND / 1000) << "\n";
+	cout << "Введіть кількість фунтів\n";
+	cin >> lbs;
+	cout << "В кілограмах це складе: " << lbs * (POUND / 1000) << "\n\n";
+  
+  float n = 0.5, m = 15, r = 25.5;
+	float length, width, hight, wallsArea;
+	cout << "Введіть довжину кімнати\n";
+	cin >> length;
+	cout << "Введіть ширину кімнати\n";
+	cin >> width;
+	cout << "Введіть висоту кімнати\n";
+	cin >> hight;
+	wallsArea = (length * hight + width * hight) * 2;
+	cout << "Аби пофарбувати кімнату потрібно: " << (wallsArea - wallsArea * m / 100) * n << " літрів фарби\n";
+	cout << "Вартість фарби складе: " << ((wallsArea - wallsArea * m / 100) * n) * r << " грн\n\n";
+  
+  long double jupiter = 1898600e+21, saturn = 568460e+21, uranus = 86832e+21, neptune = 10243e+21,
+		earth = 5973e+21, venus = 4868e+21, mars = 642e+21, mercury = 330e+21;
+	long double totalWeight = jupiter + saturn + uranus + neptune + earth + venus + mars + mercury;
+	cout << "Загальна маса всіх планет сонячної системи складає: " << totalWeight<< "\n";
+	cout << "Середнє арифметичне мас планет:" << totalWeight / 8 << "\n";
+	cout << "Маси кожної у відсотках, відносно маси всіх планет: \n"
+		<< "Юпитер " << jupiter / totalWeight * 100 << "\n"
+		<< "Сатурн " << saturn / totalWeight * 100 << "\n"
+		<< "Уран " << uranus / totalWeight * 100 << "\n"
+		<< "Нептун " << neptune / totalWeight * 100 << "\n"
+		<< "Земля " << earth / totalWeight * 100 << "\n"
+		<< "Венера " << venus / totalWeight * 100 << "\n"
+		<< "Марс " << mars / totalWeight * 100 << "\n"
+		<< "Меркурий " << mercury / totalWeight * 100 << "\n";
+	long double weightOf7= saturn + uranus + neptune + earth + venus + mars + mercury;
+	cout << "Маса Юпитера в " << jupiter / weightOf7 << " разів більше суми маси всіх інших планет сонячної системи\n";
+}

@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+void main() {
+	setlocale(0, "Ukrainian");
+	char x;
+	cout << "Введить будь-який символ\n";
+	cin >> x;
+	if( (x >= 'a' && x <= 'z') || (x >= 'A' && x <= 'Z')) {
+		cout << "Це буква\n";
+	}
+	else if (x >= '0' && x <= '9') {
+		cout << "Це цифра\n";
+	}
+	else {
+		cout << "Це символ\n";
+	}
+}

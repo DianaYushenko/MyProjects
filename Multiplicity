@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+void main()
+	{
+	setlocale(0, "Ukrainian");
+	int a;
+	cout << "Введіть число, яке треба перевірити на кратність 3,5,7, одночасно\n";
+	cin >> a;
+	if (a % 3 == 0 && a % 5 == 0 && a % 7 == 0) {
+		cout << "Число кратне 3,5,7. Вітаю.\n";
+	}
+	else {
+		cout << "Число не кратне всім трьом числам.\n";
+	}
+	}

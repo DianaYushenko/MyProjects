@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+void main()
+{
+	setlocale(0, "Ukrainian");
+	int a, b, c;
+	cout << "Введіть два числа: \n\n";
+	cin >> a;
+	cin >> b;
+	cout << "Оберіть дію, яку треба зробити з цими числами:\n"
+		<< "1) a+b\n" << "2) a-b\n" << "3) a*b\n" << "4) a/b\n" << "5) a%b\n";
+	cin >> c;
+	if (c == 1) {
+		cout << "a+b = " << a + b;
+	}
+	else if (c == 2) {
+		cout << "a-b = " << a - b;
+	}
+	else if (c == 3) {
+		cout << "a*b = " << a * b;
+	}
+	else if (c == 4) {
+		if (b == 0) {
+			cout << "Ділити на нуль, без нагляду професійного математика, ЗАБОРОНЕНО!\n";
+		}
+		else {
+			cout << "a/b = " << a / b;
+		}
+	}
+	else if (c == 5) {
+		if (b == 0) {
+			cout << "Ділити на нуль, без нагляду професійного математика, ЗАБОРОНЕНО!\n";
+		}
+		else {
+			cout << "a%b = " << a % b;
+		}
+	}
+	else {
+		cout << "Ви не обрали операцію. Спробуйте ще раз.\n\n";
+	}
+}

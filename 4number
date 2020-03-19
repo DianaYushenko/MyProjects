@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+void main()
+{
+	setlocale(0, "Ukrainian");
+	int x;
+	cout << "Введіть чило (не більше 4 разряів)\n";
+	cin >> x;
+	if (x>999 && x<10000 ) {
+		cout << "Число чотиризначне\n";
+	}
+	else if (x > 99 && x < 1000) {
+		cout << "Число тризначне\n\n";
+	}
+	else if (x >9 &&x<100){
+		cout << "Число двозначне\n\n";
+	}
+	else if (x>=0 && x<9){
+		cout << "Число скдадається з одної цифри \n\n";
+	}
+	else {
+		cout << "Помилка! Введіть коректне число\n";
+	}
+
+}

@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+void main()
+{
+	setlocale(0, "Ukrainian");
+	int data;
+	cout << "Введіть число \n\n";
+	cin >> data;
+	if (data < 0) {
+		cout << "Число негативне.\n\n";
+	}
+	else if (data > 0) {
+		cout << "Число позитивне.\n\n";
+	}
+	else {
+		cout << "Число дорівнює нулю.\n\n";
+	}
+}

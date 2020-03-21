@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+void main()
+{
+	setlocale(0, "Ukrainian");
+	int x;
+	cout << "Введіть ціле п\"ятизначне число\n";
+	cin >> x;
+	int a, b, c, d;
+	a = (x / 10000) % 10;
+	b = (x / 1000) % 10;
+	c = (x / 10) % 10;
+	d = x % 10;
+	if (a == d && b == c) {
+		cout << "Ваше число паліндром.\n";
+	}
+	else {
+		cout << "Ваше число не паліндром.\n";
+	}
+}

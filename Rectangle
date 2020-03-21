@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+void main()
+{
+	setlocale(0, "Ukrainian");
+	int xLeft, xRight, xPoint, yLeft, yRight, yPoint;
+	cout << "Введіть координати верхнього лівого і нижнього правого кута прямокутника\n";
+	cout << "Х лівого кута \n";
+	cin >> xLeft;
+	cout << "Х правого кута \n";
+	cin >> xRight;
+	cout << "У лівого кута \n";
+	cin >> yLeft;
+	cout << "У правого кута \n";
+	cin >> yRight;
+	cout << "Введіть координати точки, яку треба перевірити на приналежність прямокутнику \n";
+	cout << "Х координата \n";
+	cin >> xPoint;
+	cout << "У координата \n";
+	cin >> yPoint;
+	if (xPoint >= xLeft && xPoint <= xRight && yPoint <= yLeft && yPoint >= yRight) {
+		cout << "Точка належить прямокутнику\n";
+	}
+	else {
+		cout << "Точка за межами прямокутника\n";
+	}
+}

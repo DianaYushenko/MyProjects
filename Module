@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+void main()
+{
+	setlocale(0, "Ukrainian");
+	float x;
+	cout << "Введіть будь-яке число: \n";
+	cin >> x;
+	if (x < 0) {
+		cout << "Модуль числа дорівнює: " << x * -1<<"\n\n";
+	}
+	else {
+		cout << "Модуль числа дорівнює: " << x << "\n\n";
+	}
+}

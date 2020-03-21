@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+void main()
+{
+	setlocale(0, "Ukrainian");
+	int x;
+	cout << "Введіть ціле число.\n";
+	cin >> x;
+	if (x%2==0)
+	{
+		cout << "Число парне.\n\n";
+	}
+	else
+	{
+		cout << "Число не парне.\n\n";
+	}
+}

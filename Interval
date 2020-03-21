@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+void main()
+{
+	setlocale(0, "Ukrainian");
+	int a;
+	cout << "Введіть число, яке треба перевірити на належність до діапазону 100-200.\n";
+	cin >> a;
+	if (a >= 100 && a <= 200) {
+		cout << "Належить до діапазону.\n";
+	}
+	else {
+		cout << "Не належить до діапазону.\n\n";
+	}
+}

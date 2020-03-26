@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int fact(int n)
+{
+	if (n < 0)
+		return 0;
+	if (n == 0)
+		return 1;
+	else
+		return n * fact(n - 1);
+}
+int main() {
+	setlocale(0, "Ukrainian");
+	int n;
+	cout << "Введіть число для розрахунку факторіалу: ";
+	cin >> n;
+	cout << "Факторіал числа n складає: " << fact(n) << endl;
+	return 0;
+}

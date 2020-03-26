@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+int main() {
+	setlocale(0, "Ukrainian");
+	int amount = 0;
+	int	a, b, c, d, e, f, g, j;
+	for (long i = 10000000; i <= 99999999; i++) {
+		a = i /10000000;
+		b = (i / 1000000) % 10;
+		c = (i / 100000) % 10;
+		d = (i / 10000) % 10;
+		e = (i / 1000) % 10;
+		f = (i / 100) % 10;
+		g = (i / 10) % 10;
+		j = i % 10;
+		if (a != b && a != c && a != d && a != e && a != f && a != g && a != j) {
+			if ( b != c && b != d && b != e && b != f && b != g && b != j) {
+				if (c != d && c != e && c != f && c != g && c != j) {
+					if (d != e && d != f && d != g && d != j) {
+						if (e != f && e != g && e != j) {
+							if (f != g && f != j) {
+								if (g != j) {
+									
+							        if (i % 12345 == 0) {
+											amount++;
+											cout << i << endl;
+
+									}
+									
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	cout << "Кількість потрібних чисел дорівнює: " << amount << endl;
+}

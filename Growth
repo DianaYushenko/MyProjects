@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main() {
+	setlocale(0, "Ukrainian");
+	int number, a, b;
+	bool res=true;
+	cout << "Введіть число:";
+	cin >> number;
+	while (number >0) {
+		a = number % 10;
+		b = number % 100 / 10;
+
+		if (a<b) {
+			res=false;
+			break;
+		}
+		
+			number /= 10;
+		
+	}
+	if (res == true)
+		cout << "Цифри розміщені у добутному порядку\n";
+	else
+		cout << "Число не підходить умові.\n";
+}

@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(0, "Ukrainian");
+	int attempt = 10;
+	bool answ = true;
+	int value = 500;
+	int bottom = 0;
+	int max = 1000;
+	while (attempt--)
+	{
+		cout << "Ваше число більше ніж " << value << "? 1 - так. 0 - ні." << endl;
+		cin >> answ;
+		if (answ)
+		{
+			bottom = value;
+			value = bottom + (max - bottom) / 2;
+		}
+		else
+		{
+			max = value;
+			value = bottom + (max - bottom) / 2;
+		}
+
+		if (max - bottom == 1)
+		{
+			value = bottom + 1;
+			break;
+		}
+	}
+	cout << "Ваше число: " << value << endl;
+	system("PAUSE");
+	return 0;
+}

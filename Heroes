@@ -1,0 +1,57 @@
+#include <iostream>
+#include <ctime>
+#include <Windows.h>
+#include <conio.h>
+#include <string>
+
+using namespace std;
+int main() {
+	setlocale(0, "Ukrainian");
+	cout << "Ви - король. У ваших володіннях оселився дракон." << endl;
+	cout << "Вам необхідно вбити його, щоб жителям ваших володінь нічого не загрожувало." << endl;
+	cout << "Але ваших ресурсів вистачає лише на обмежену кількість солдат." << endl;
+	cout << "У вашому розпорядженні тільки копейщики." << endl;
+	int yourHealth, dragonHealth, yourAttack, dragonAttack, amountSoldgiers;
+	cout << "Введіть характеристики копійщика: \n";
+	cout << "Здоров'я: \n";
+	cin >> yourHealth;
+	cout << "Атака: \n";
+	cin >> yourAttack;
+	cout << "Кількість солдат: \n";
+	cin >> amountSoldgiers;
+	cout << "Введіть характеристики дракона: \n";
+	cout << "Здоров'я: \n";
+	cin >> dragonHealth;
+	cout << "Атака: \n";
+	cin >> dragonAttack;
+	Sleep(2000);
+	cout << "Починається битва!" << endl;
+	cout << "Копійщики нападають перші!" << endl;
+	int	helthSquode = yourHealth * amountSoldgiers;
+	int attackSquode = yourAttack * amountSoldgiers;
+	while (helthSquode > 0) {
+		dragonHealth -= attackSquode;
+		if (dragonHealth <= 0) {
+			cout << "Дракон вбитий! Ви перемогли!";
+			break;
+		}
+		else {
+			cout << "Атака пройшла успішно. Залишок здоров'я дракона: " << dragonHealth<<endl;
+		}
+		Sleep(2000);
+		cout << "Тепер атакує дракон!" << endl;
+		helthSquode -= dragonAttack;
+		if (helthSquode % amountSoldgiers != 0) {
+			cout << "У вас залишилось " << helthSquode / amountSoldgiers << "здорових копійщиків\n";
+			cout << "І один поранений, зі здоров'ям " << helthSquode % yourHealth << endl;
+        }
+		else {
+			cout << "У вас залишилось " << helthSquode / amountSoldgiers << " здорових копійщиків\n";
+		}
+		Sleep(2000);
+		if (helthSquode <= 0) {
+		cout << "Ваше військо загинуло. Спробуйте взяти більше копійщиків." << endl << endl;
+	}
+	
+	}
+}

@@ -1,0 +1,258 @@
+#include <iostream>
+#include <Windows.h>
+#include <string>
+using namespace std;
+int main() {
+	setlocale(0, "Ukrainian");
+	SYSTEMTIME st;
+	GetSystemTime(&st);
+    srand(st.wMilliseconds);
+	rand();
+    int num[] = { 0,1,2,3,4,5,6,7 };
+	int x, y, z;
+	int score = 5000;
+	int price = 20;
+	cout << "Вітаю в грі!\n" << "На вашому рахунку 5000 монет. Кожен запук коштує 20 монет.\n"
+		<< "Виграшні комбінації принесуть Вам додаткові монети!\n"
+		<< "Комбінація 666 забиратиме 50 монет.\n"
+		<< "Гра триватиме, поки у Вас є монети на рахунку. Бажаю успіху!\n\n\n";
+	Sleep(5000);
+	int result = MessageBoxA(0, "Бажаєте зіграти?", "Вітаю!", MB_OKCANCEL);
+	if (result == IDOK)
+	{
+		cout << "Гра розпочинається!\n";
+	}
+	else if (result == IDCANCEL)
+	{
+		cout << "Бувайте!\n";
+		return 0;
+	}
+	while (score > 0) {
+		cout << "На вашому рахунку: " << score << endl<< endl ;
+		score -= 20;
+		x = num[rand() % 8];
+		y = num[rand() % 8];
+		z = num[rand() % 8];
+		if (x == 0 && y == 0 && z == 0) {
+			cout << "\t" << x << "\t" << y << "\t" << z<< endl;
+			score += 50;
+			cout << "Вітаю!\n"<<endl;
+			Sleep(2000);
+			int result = MessageBoxA(0, "Бажаєте продовжити?", "Виграш 50 монет!", MB_OKCANCEL);
+			if (result == IDOK)
+			{
+				cout << "Гра триває!\n"<<endl;
+			
+			}
+			else if (result == IDCANCEL)
+			{
+				cout << "Гру зупинено. Бувайте!\n";
+				break;
+			}
+		}
+		else if (x == 1 && y == 1 && z == 1) {
+			score += 50;
+			cout << "\t" << x <<"\t" << y << "\t" << z << endl;
+			cout << "Вітаю!\n" << endl;
+			Sleep(2000);
+			int result = MessageBoxA(0, "Бажаєте продовжити?", "Виграш 50 монет!", MB_OKCANCEL);
+			if (result == IDOK)
+			{
+				cout << "Гра триває!\n" << endl;
+
+			}
+			else if (result == IDCANCEL)
+			{
+				cout << "Гру зупинено. Бувайте!\n";
+				break;
+			}
+		}
+		else if (x == 2 && y == 2 && z == 2) {
+			score += 50;
+			cout << "\t" << x << "\t" << y << "\t" << z << endl;
+			cout << "Вітаю!\n" << endl;
+			Sleep(2000);
+			int result = MessageBoxA(0, "Бажаєте продовжити?", "Виграш 50 монет!", MB_OKCANCEL);
+			if (result == IDOK)
+			{
+				cout << "Гра триває!\n" << endl;
+
+			}
+			else if (result == IDCANCEL)
+			{
+				cout << "Гру зупинено. Бувайте!\n";
+				break;
+			}
+		}
+		else if (x == 3 && y == 3 && z == 3) {
+			score += 50;
+			cout << "\t" << x << "\t" << y << "\t" << z << endl;
+			cout << "Вітаю!\n" << endl;
+			Sleep(2000);
+			int result = MessageBoxA(0, "Бажаєте продовжити?", "Виграш 50 монет!", MB_OKCANCEL);
+			if (result == IDOK)
+			{
+				cout << "Гра триває!\n" << endl;
+
+			}
+			else if (result == IDCANCEL)
+			{
+				cout << "Гру зупинено. Бувайте!\n";
+				break;
+			}
+		}
+		else if (x == 4 && y == 4 && z == 4) {
+			score += 50;
+			cout << "\t" << x << "\t" << y << "\t" << z << endl;
+			cout << "Вітаю!\n" << endl;
+			Sleep(2000);
+			int result = MessageBoxA(0, "Бажаєте продовжити?", "Виграш 50 монет!", MB_OKCANCEL);
+			if (result == IDOK)
+			{
+				cout << "Гра триває!\n" << endl;
+
+			}
+			else if (result == IDCANCEL)
+			{
+				cout << "Гру зупинено. Бувайте!\n";
+				break;
+			}
+		}
+		else if (x == 5 && y == 5 && z == 5) {
+			score += 50;
+			cout << "\t" << x << "\t" << y << "\t" << z << endl;
+			cout << "Вітаю!\n" << endl;
+			Sleep(2000);
+			int result = MessageBoxA(0, "Бажаєте продовжити?", "Виграш 50 монет!", MB_OKCANCEL);
+			if (result == IDOK)
+			{
+				cout << "Гра триває!\n" << endl;
+
+			}
+			else if (result == IDCANCEL)
+			{
+				cout << "Гру зупинено. Бувайте!\n";
+				break;
+			}
+		}
+		else if (x == 6 && y == 6 && z == 6) {
+			score -= 50;
+			cout << "\t" << x << "\t" << y << "\t" << z << endl;
+			cout << "Штрафний!\n" << endl;
+			Sleep(2000);
+			int result = MessageBoxA(0, "Бажаєте продовжити?", "Програш 50 монет((", MB_OKCANCEL);
+			if (result == IDOK)
+			{
+				cout << "Гра триває!\n" << endl;
+
+			}
+			else if (result == IDCANCEL)
+			{
+				cout << "Гру зупинено. Бувайте!\n";
+				break;
+			}
+		}
+		else if (x == 7 && y == 7 && z == 7) {
+		score += 100;
+		cout << "\t" << x << "\t" << y << "\t" << z << endl;
+		cout << "Ви виграли бонус!!! Вітаю!\n" << endl;
+		Sleep(2000);
+		int result = MessageBoxA(0, "Бажаєте продовжити?", "Виграш 100 монет!", MB_OKCANCEL);
+		if (result == IDOK)
+		{
+			cout << "Гра триває!\n" << endl;
+
+		}
+		else if (result == IDCANCEL)
+		{
+			cout << "Гру зупинено. Бувайте!\n";
+			break;
+		}
+		}
+		else if (x == 5 ) {
+		score += 30;
+		cout << "\t" << x << "\t" << y << "\t" << z << endl;
+		cout << "Вітаю!\n" << endl;
+		Sleep(2000);
+		int result = MessageBoxA(0, "Бажаєте продовжити?", "Виграш 30 монет!", MB_OKCANCEL);
+		if (result == IDOK)
+		{
+			cout << "Гра триває!\n" << endl;
+
+		}
+		else if (result == IDCANCEL)
+		{
+			cout << "Гру зупинено. Бувайте!\n";
+			break;
+		}
+		}
+		else if (x == 5 && y == 5 ) {
+		score += 40;
+		cout << "\t" << x << "\t" << y << "\t" << z << endl;
+		cout << "Вітаю!\n" << endl;
+		Sleep(2000);
+		int result = MessageBoxA(0, "Бажаєте продовжити?", "Виграш 40 монет!", MB_OKCANCEL);
+		if (result == IDOK)
+		{
+			cout << "Гра триває!\n" << endl;
+
+		}
+		else if (result == IDCANCEL)
+		{
+			cout << "Гру зупинено. Бувайте!\n";
+			break;
+		}
+		}
+		else if (x == 7) {
+		score += 30;
+		cout << "\t" << x << "\t" << y << "\t" << z << endl;
+		cout << "Вітаю!\n" << endl;
+		Sleep(2000);
+		int result = MessageBoxA(0, "Бажаєте продовжити?", "Виграш 30 монет!", MB_OKCANCEL);
+		if (result == IDOK)
+		{
+			cout << "Гра триває!\n" << endl;
+
+		}
+		else if (result == IDCANCEL)
+		{
+			cout << "Гру зупинено. Бувайте!\n";
+			break;
+		}
+		}
+		else if (x == 7 && y == 7) {
+		score += 40;
+		cout << "\t" << x << "\t" << y << "\t" << z << endl;
+		cout << "Вітаю!\n" << endl;
+		Sleep(2000);
+		int result = MessageBoxA(0, "Бажаєте продовжити?", "Виграш 40 монет!", MB_OKCANCEL);
+		if (result == IDOK)
+		{
+			cout << "Гра триває!\n" << endl;
+
+		}
+		else if (result == IDCANCEL)
+		{
+			cout << "Гру зупинено. Бувайте!\n";
+			break;
+		}
+		}
+		else  {
+	
+		cout << "\t" << x << "\t" << y << "\t" << z << endl;
+		cout << "Наступного разу пощастить!\n" << endl;
+		Sleep(2000);
+		int result = MessageBoxA(0, "Бажаєте продовжити?", "Виграш 0 монет!", MB_OKCANCEL);
+		if (result == IDOK)
+		{
+			cout << "Гра триває!\n" << endl;
+
+		}
+		else if (result == IDCANCEL)
+		{
+			cout << "Гру зупинено. Бувайте!\n";
+			break;
+		}
+		}
+	}
+}

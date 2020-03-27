@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int main() {
+	setlocale(0, "Ukrainian");
+	int number;
+	cout << "Введіть число:";
+	cin >> number;
+	while (number>=10) {
+		
+		if ((number%100)%11==0) {
+			cout << "Є дві цифри  поспіль.\n";
+			break;
+		}
+		else
+		number /= 10;
+	}
+	if (number < 10)
+		cout << "Нема двох цифр поспіль.\n";
+}

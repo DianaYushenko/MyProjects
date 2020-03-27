@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	setlocale(0, "Ukrainian");
+	int minCel, maxCel;
+	cout << "Аби отримати таблицю, введіть початкове значення діапазону у градусах по Цельсію: ";
+	cin >> minCel;
+	cout << "Введіть кінцеве значення діапазону по Цельсію: ";
+	cin >> maxCel;
+	for (float i = minCel; i <= maxCel; ++i)
+	{
+		cout << "По Цельсію: " << i << "-- По Фаренгейту: " << 1.8 * i + 32 << "\n";
+	}
+}

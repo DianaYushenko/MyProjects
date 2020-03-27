@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(0, "Ukrainian");
+	int number, counter = 1;
+	cout << "Введіть число: ";
+	cin >> number;
+	int sum = number % 10;
+	while ((number /= 10) > 0)
+	{
+		counter++;
+		sum += number % 10;
+	}
+	cout <<"Ваше число складається з "<< counter <<" чисел.\n"<< "Їх сума складає: " << sum << endl;
+}

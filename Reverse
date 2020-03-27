@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main() {
+	setlocale(0, "Ukrainian");
+	int number, reverse;
+	cout << "Введіть число, яке хочете перевернути: ";
+	cin >> number;
+	reverse = 0;
+		while (number > 0) {
+			reverse = number % 10 + reverse * 10;
+			number /= 10;
+		}
+		cout <<"Ваш результат: "<< reverse << endl;
+}

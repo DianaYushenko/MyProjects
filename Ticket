@@ -1,0 +1,26 @@
+#include <iostream>
+#include <iomanip>
+#include <cstdlib>
+#include <clocale>
+
+using namespace std;
+
+int main()
+{
+	setlocale(0, "Ukrainian");
+	int start=1, end=999999;
+	cout << endl << setfill('0');
+	int amount = 0;
+	for (int i = start; i <= end; ++i) {
+		int half1 = i / 1000;
+		int half2 = i % 1000;
+		if (half1 % 10 + ((half1 / 100)%10)+((half1 / 1000)%10) == (half2 % 10 + ((half2 / 100)%10) + ((half2 / 1000)%10))) {
+			cout << setw(6) << i << endl;
+			amount++;
+		}
+	}
+	cout << endl << setfill(' ');
+	cout <<"Кількість щасливих квитків: "<< amount << endl;
+	system("pause");
+	return 0;
+}

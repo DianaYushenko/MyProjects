@@ -1,0 +1,21 @@
+#include <iostream>
+#include <windows.h>
+#include <string>
+using namespace std;
+
+void main()
+{
+	setlocale(0, "Ukrainian");
+	int number;
+	cout << "Введіть число для конвертації: ";
+	cin >> number;
+	char* result = new char[100];
+    _itoa_s(number, result, 99, 2);
+     cout << result << "\n";
+	 char* result1 = new char[100];
+	 _itoa_s(number, result1, 99, 8);
+	 cout << result1 << "\n";
+	 char* result2 = new char[100];
+	 _itoa_s(number, result2, 99, 16);
+	 cout << result2 << "\n";
+}

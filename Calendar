@@ -1,0 +1,76 @@
+#include "Windows.h"
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int countMonth(int startDay, int daysNumber, int name)
+{
+	cout << "                     " << name << endl << "__________________________________________________" << endl;
+	cout << "Пн\tВт\tСр\tЧт\tПт\tСб\tВс" << endl;
+	for (int i = 1; i < startDay; i++)
+		cout << "\t";
+	for (int i = 1; i <= daysNumber; i++)
+	{
+		cout << i << "\t";
+		if ((startDay + i) % 7 == 1)
+			cout << endl;
+	}
+	cout << endl;
+	cout << endl;
+	startDay = (startDay + daysNumber) % 7;
+	if (startDay == 0)
+		startDay = 7;
+	return startDay;
+}
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+
+	int a, Feb;
+	cout << "Введіть рік: ";
+	cin >> a;
+	if (a % 4 == 0 && a % 100 != 0 || a % 400 == 0)
+		Feb = 29;
+	else
+		Feb = 28;
+
+	int  leapyears, years, days, b;
+	if (a % 4 == 0 && a % 100 != 0 || a % 400 == 0)
+	{
+		years = a - 1900;
+		leapyears = (years - 1) / 4;
+		days = years * 366 + leapyears;
+		b = days % 7;
+	}
+	else
+	{
+		years = a - 1900;
+		leapyears = (years - 1) / 4;
+		days = years * 365 + leapyears;
+		b = days % 7;
+	}
+
+	cout << endl;
+
+	b = countMonth(b, 31, 01);
+	b = countMonth(b, Feb, 02);
+	b = countMonth(b, 31, 03);
+	b = countMonth(b, 30, 04);
+	b = countMonth(b, 31, 05);
+	b = countMonth(b, 30, 06);
+	b = countMonth(b, 31, 07);
+	b = countMonth(b, 31, 8);
+	b = countMonth(b, 30, 9);
+	b = countMonth(b, 31, 10);
+	b = countMonth(b, 30, 11);
+	b = countMonth(b, 31, 12);
+
+
+	system("pause");
+
+	return 0;
+}
+	
+

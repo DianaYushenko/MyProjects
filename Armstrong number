@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	for (int number = 1; number < 10000000; number++)
+	{
+		
+		int R = 0;
+		int copy = number; 
+		while (copy > 0)
+		{
+			R++;
+			copy /= 10;
+		}
+		
+
+		
+		int sum = 0; 
+
+		copy = number;
+		while (copy > 0)
+		{
+			sum += pow(copy % 10, R);
+			copy /= 10;
+		}
+
+		if (number == sum) 
+			cout << number << "\n";
+	}
+}

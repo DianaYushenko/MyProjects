@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(0, "Ukrainian");
+	int start = 1, end = 99999;
+	
+	int amount = 0;
+	for (int i = start; i <= end; ++i) {
+		int copy=i;
+
+		while (copy > 0)
+		{
+			int number = copy % 10;
+			if (number == 4 || (number== 3 && (copy/10) % 10 == 1))
+			{
+				amount++;
+				cout << i << endl;
+			}
+			copy /= 10;
+		}
+		
+		
+		
+	}
+	cout << "Кількість заборонених номерів: " << amount << endl;
+	system("pause");
+	return 0;
+}

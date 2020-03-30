@@ -1,0 +1,36 @@
+#include "Windows.h"
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+
+	int day, dayOfWeek, year, mounth, a, y, m;
+	cout << "Введіть рік: ";
+	cin >> year;
+	cout << "Введіть місяць : ";
+	cin >> mounth;
+	cout << "Введіть день: ";
+	cin >> day;
+	a = (14 - mounth) / 12;
+	y = year - a;
+	m = mounth + 12 * a - 2;
+	dayOfWeek = (day + y + y / 4 - y / 100 + y / 400 + (31 * m) / 12) % 7;
+	if (dayOfWeek == 0) 
+		cout << "Неділя \n";
+        if (dayOfWeek == 1 )
+		    cout << "Понеділок \n";
+           if (dayOfWeek == 2)
+		       cout << "Вівторок \n";
+	           if (dayOfWeek == 3)
+		          cout << "Середа \n";
+	              if (dayOfWeek == 4)
+		              cout << "Четвер \n";
+	                 if (dayOfWeek == 5)
+		                 cout << "П\"ятниця \n";
+	                      if (dayOfWeek == 6)
+		                     cout << "Субота \n";
+
+}
